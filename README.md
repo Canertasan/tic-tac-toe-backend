@@ -26,4 +26,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Additional Gems
+- active-model-serializer
+- awesome_print
+- pry_rails
