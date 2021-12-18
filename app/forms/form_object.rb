@@ -15,6 +15,8 @@
 # creating_values:    default values for creating a new belongs_to record
 # related_attributes: shared attributes between the main object and relation. Used for creating.
 
+require 'tic_tac_toe_errors'
+
 class FormObject
   include Virtus.model
   include AssignsFormObject
@@ -54,7 +56,7 @@ class FormObject
   private
 
   def bad_request!(message = nil)
-    raise ParasutErrors::BadRequest, message
+    raise TicTacToeErrors::BadRequest, message
   end
 
   def assign_object_data_attributes(attributes)
