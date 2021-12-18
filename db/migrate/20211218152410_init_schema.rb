@@ -8,9 +8,10 @@ class InitSchema < ActiveRecord::Migration[6.1]
 
   def create_users_table
     create_table(:users, id: :serial) do |t|
-      t.string(:name, null: false, unique: true)
+      t.string(:name, null: false)
       t.integer(:winning_count)
 
+      t.index(:name, unique: true)
       t.timestamps
     end
   end

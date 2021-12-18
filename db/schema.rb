@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_12_18_152410) do
     t.integer "winning_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
   add_foreign_key "game_turns", "users"

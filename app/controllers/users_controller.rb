@@ -10,11 +10,10 @@ class UsersController < ApplicationController
 
   def create
     form = UserForm.new(User.new, params)
-    binding.pry
     service = UserService::Create.call(user: form.object)
 
     if service.succeeded?
-      render jsonapi: service.result, status: :created # , include: params[:include]
+      render json: service.result, status: :created
     else
       render_service_errors(service)
     end
