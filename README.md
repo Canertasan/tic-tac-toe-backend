@@ -30,3 +30,14 @@ Things you may want to cover:
 - active-model-serializer
 - awesome_print
 - pry_rails
+- guard-rubocop
+- guard-rspec
+- db-query-matchers
+- rubocop
+- rubocop-rspec-focused
+- rubocop-rspec
+- rubocop-performance
+- rspec-rails
+- shoulda-matchers
+- factory_bot_rails
+- database_cleaner

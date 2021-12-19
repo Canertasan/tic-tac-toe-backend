@@ -41,6 +41,32 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   
   gem 'pry-rails'
+
+  ### TESTING ###
+  # RSpec matchers for database queries.
+  gem 'db-query-matchers', '0.10.0'
+
+  gem 'rubocop', '~> 1.7'
+  gem 'rubocop-rspec-focused', '0.1.0'
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-performance', require: false
+
+  gem 'guard-rubocop'
+  gem 'guard-rspec', require: false
+
+  # RSpec for Rails (http://github.com/rspec/rspec-rails)
+  gem 'rspec-rails'
+
+  # Making tests easy on the fingers and eyes
+  # (http://thoughtbot.com/community/)
+  gem 'shoulda-matchers', '~> 4.2', require: false
+
+  # Factory Bot ♥ Rails (https://github.com/thoughtbot/factory_bot_rails)
+  gem 'factory_bot_rails', '4.11.0' # search
+
+  # Strategies for cleaning databases.  Can be used to ensure a clean state for
+  # testing. (http://github.com/DatabaseCleaner/database_cleaner)
+  gem 'database_cleaner' # search
 end
 
 group :development do

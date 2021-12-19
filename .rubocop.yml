@@ -1,0 +1,38 @@
+require:
+  - rubocop/rspec/focused
+  - rubocop-performance
+  - rubocop-rspec
+
+inherit_from:
+  - .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.6.6
+  NewCops: enable
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - vendor/**/*
+
+Layout/ExtraSpacing:
+  # this is breaking AlignHash cop, so disabling it until rubocop fixes it
+  # https://github.com/bbatsov/rubocop/issues/2109
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+  EnforcedLastArgumentHashStyle: always_inspect
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+RSpec/Focused:
+  Enabled: true
+  AutoCorrect: false
+
+Lint/UnusedMethodArgument:
+  AutoCorrect: false
+
+Lint/Debugger:
+  AutoCorrect: false
