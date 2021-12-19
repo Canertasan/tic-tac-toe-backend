@@ -19,7 +19,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def find_user_by_name
+    user = User.find_by(name: params[:name])
+    if user.nil?
+      render json: { errors: { detail: "User cannot be found" }}
+    else
+      render json: user
+    end
+  end
+
   private
+
 
   def find_user
     @user = User.find(params[:id])
